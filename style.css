@@ -1,0 +1,419 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    color:white;
+    overflow-x:hidden;
+    background:#111;
+}
+
+/* BACKGROUND */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.7)),
+    url("foto/bg.jpg");
+    background-size:cover;
+    background-position:center;
+    z-index:-1;
+    animation:zoom 15s infinite alternate;
+}
+
+@keyframes zoom{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.1);
+    }
+
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(5px);
+    z-index:999;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ffd700;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ffd700;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero-content{
+    max-width:700px;
+    background:rgba(255,255,255,0.1);
+    padding:60px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    animation:muncul 2s ease;
+}
+
+@keyframes muncul{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.welcome{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    color:#ffd700;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:white;
+}
+
+.tanggal{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ffd700;
+    color:black;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:45px;
+    color:#ffd700;
+    margin-bottom:50px;
+}
+
+/* STORY */
+
+.story-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.story-image img{
+    width:280px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid white;
+}
+
+.story-text{
+    max-width:500px;
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    line-height:30px;
+}
+
+/* KELUARGA */
+
+.keluarga-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card-keluarga{
+    width:350px;
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
+
+.card-keluarga h3{
+    color:#ffd700;
+    margin-bottom:20px;
+}
+
+/* MAP */
+
+.map{
+    display:flex;
+    justify-content:center;
+}
+
+.map img{
+    width:100%;
+    max-width:900px;
+    border-radius:25px;
+    border:5px solid white;
+}
+
+/* FORM */
+
+.form-container{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background:rgba(255,255,255,0.1);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+}
+
+.form-container input,
+.form-container textarea{
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-size:16px;
+}
+
+.form-container textarea{
+    height:150px;
+    resize:none;
+}
+
+.form-container button{
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:#ffd700;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-container button:hover{
+    background:white;
+    transform:scale(1.03);
+}
+
+/* LOGIN BUTTON */
+
+.login-btn{
+    display:block;
+    width:250px;
+    margin:40px auto 0;
+    text-align:center;
+    padding:15px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+.login-btn:hover{
+    background:#ffd700;
+}
+
+/* MUSIC BUTTON */
+
+.music-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#ffd700;
+    font-size:25px;
+    cursor:pointer;
+    z-index:999;
+}
+
+/* ===========================
+   MODE TABLET
+=========================== */
+
+@media(max-width:992px){
+
+    .hero-content h1{
+        font-size:55px;
+    }
+
+    .menu{
+        gap:15px;
+    }
+
+}
+
+/* ===========================
+   MODE HP
+=========================== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content{
+        padding:40px 25px;
+    }
+
+    .welcome{
+        font-size:22px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+        line-height:60px;
+    }
+
+    .tanggal{
+        font-size:18px;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+    section h2{
+        font-size:32px;
+    }
+
+    .story-image img{
+        width:100%;
+        max-width:300px;
+        height:300px;
+    }
+
+    .story-text{
+        font-size:15px;
+        line-height:28px;
+    }
+
+    .card-keluarga{
+        width:100%;
+    }
+
+    .form-container{
+        padding:25px;
+    }
+
+    .form-container input,
+    .form-container textarea{
+        font-size:15px;
+    }
+
+    .login-btn{
+        width:100%;
+    }
+
+}
+
+/* ===========================
+   HP KECIL
+=========================== */
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:32px;
+        line-height:45px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .music-btn{
+        width:50px;
+        height:50px;
+        font-size:20px;
+    }
+
+}
