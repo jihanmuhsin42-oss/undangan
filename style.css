@@ -3,29 +3,43 @@
     padding:0;
     box-sizing:border-box;
     scroll-behavior:smooth;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    font-family:Arial, sans-serif;
+    background:#5c2c2c;
     color:white;
     overflow-x:hidden;
-    background:#111;
 }
 
 /* BACKGROUND */
 
+/* BACKGROUND */
+
 .background{
+
     position:fixed;
     width:100%;
-    height:100%;
+    height:100vh;
+
+    top:0;
+    left:0;
+
     background:
-    linear-gradient(rgba(0,0,0,0.6),
-    rgba(0,0,0,0.7)),
-    url("foto/bg.jpg");
+    linear-gradient(
+    rgba(92,44,44,0.7),
+    rgba(92,44,44,0.8)
+    ),
+    url("download.png");
+
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
+
     z-index:-1;
+
     animation:zoom 15s infinite alternate;
+
 }
 
 @keyframes zoom{
@@ -51,15 +65,14 @@ nav{
     position:fixed;
     top:0;
     left:0;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(5px);
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(10px);
     z-index:999;
 }
 
 .logo{
-    font-size:30px;
+    font-size:28px;
     font-weight:bold;
-    color:#ffd700;
 }
 
 .menu{
@@ -68,13 +81,14 @@ nav{
 }
 
 .menu a{
-    color:white;
     text-decoration:none;
+    color:white;
+    font-size:16px;
     transition:0.3s;
 }
 
 .menu a:hover{
-    color:#ffd700;
+    color:#7b0000;
 }
 
 /* HERO */
@@ -85,58 +99,61 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:120px 20px 60px;
     text-align:center;
-    padding:120px 20px;
 }
 
 .hero-content{
+    width:100%;
     max-width:700px;
-    background:rgba(255,255,255,0.1);
-    padding:60px;
-    border-radius:30px;
-    backdrop-filter:blur(10px);
-    animation:muncul 2s ease;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    padding:60px 40px;
+    border-radius:35px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
 }
 
-@keyframes muncul{
-
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+.love-icon{
+    font-size:55px;
+    margin-bottom:20px;
 }
 
 .welcome{
-    font-size:30px;
+    letter-spacing:3px;
     margin-bottom:20px;
+    font-size:20px;
 }
 
 .hero-content h1{
-    font-size:70px;
-    color:#ffd700;
+    font-size:75px;
+    color:#fff;
+    line-height:1.2;
     margin-bottom:20px;
+    font-family:serif;
 }
 
 .hero-content span{
-    color:white;
+    color:#7b0000;
 }
 
 .tanggal{
-    font-size:22px;
-    margin-bottom:30px;
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.hero-text{
+    line-height:30px;
+    max-width:500px;
+    margin:auto;
+    margin-bottom:35px;
+    color:#eee;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 35px;
-    background:#ffd700;
-    color:black;
+    padding:16px 40px;
+    background:#7b0000;
+    color:white;
     text-decoration:none;
     border-radius:50px;
     font-weight:bold;
@@ -144,7 +161,7 @@ nav{
 }
 
 .btn:hover{
-    background:white;
+    background:#a00000;
     transform:scale(1.05);
 }
 
@@ -157,7 +174,6 @@ section{
 section h2{
     text-align:center;
     font-size:45px;
-    color:#ffd700;
     margin-bottom:50px;
 }
 
@@ -175,15 +191,15 @@ section h2{
     width:280px;
     height:350px;
     object-fit:cover;
-    border-radius:20px;
-    border:5px solid white;
+    border-radius:25px;
+    border:4px solid white;
 }
 
 .story-text{
     max-width:500px;
-    background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.08);
     padding:30px;
-    border-radius:20px;
+    border-radius:25px;
     line-height:30px;
 }
 
@@ -192,22 +208,21 @@ section h2{
 .keluarga-container{
     display:flex;
     justify-content:center;
-    gap:40px;
+    gap:30px;
     flex-wrap:wrap;
 }
 
 .card-keluarga{
     width:350px;
-    background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.08);
     padding:30px;
-    border-radius:20px;
+    border-radius:25px;
     text-align:center;
-    backdrop-filter:blur(10px);
 }
 
 .card-keluarga h3{
-    color:#ffd700;
     margin-bottom:20px;
+    color:#7b0000;
 }
 
 /* MAP */
@@ -232,10 +247,9 @@ section h2{
     display:flex;
     flex-direction:column;
     gap:20px;
-    background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.08);
     padding:40px;
     border-radius:25px;
-    backdrop-filter:blur(10px);
 }
 
 .form-container input,
@@ -256,7 +270,8 @@ section h2{
     padding:18px;
     border:none;
     border-radius:50px;
-    background:#ffd700;
+    background:#7b0000;
+    color:white;
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
@@ -264,11 +279,10 @@ section h2{
 }
 
 .form-container button:hover{
-    background:white;
-    transform:scale(1.03);
+    background:#a00000;
 }
 
-/* LOGIN BUTTON */
+/* LOGIN */
 
 .login-btn{
     display:block;
@@ -284,10 +298,10 @@ section h2{
 }
 
 .login-btn:hover{
-    background:#ffd700;
+    background:#7b0000;
 }
 
-/* MUSIC BUTTON */
+/* MUSIC */
 
 .music-btn{
     position:fixed;
@@ -297,42 +311,20 @@ section h2{
     height:60px;
     border:none;
     border-radius:50%;
-    background:#ffd700;
+    background:#7b0000;
+    color:white;
     font-size:25px;
     cursor:pointer;
     z-index:999;
 }
 
-/* ===========================
-   MODE TABLET
-=========================== */
-
-@media(max-width:992px){
-
-    .hero-content h1{
-        font-size:55px;
-    }
-
-    .menu{
-        gap:15px;
-    }
-
-}
-
-/* ===========================
-   MODE HP
-=========================== */
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
     nav{
         flex-direction:column;
-        gap:15px;
-        padding:15px;
-    }
-
-    .logo{
-        font-size:24px;
+        gap:10px;
     }
 
     .menu{
@@ -341,79 +333,19 @@ section h2{
     }
 
     .hero-content{
-        padding:40px 25px;
-    }
-
-    .welcome{
-        font-size:22px;
+        padding:40px 20px;
     }
 
     .hero-content h1{
-        font-size:40px;
-        line-height:60px;
-    }
-
-    .tanggal{
-        font-size:18px;
-    }
-
-    section{
-        padding:70px 20px;
+        font-size:45px;
     }
 
     section h2{
-        font-size:32px;
-    }
-
-    .story-image img{
-        width:100%;
-        max-width:300px;
-        height:300px;
-    }
-
-    .story-text{
-        font-size:15px;
-        line-height:28px;
+        font-size:35px;
     }
 
     .card-keluarga{
         width:100%;
-    }
-
-    .form-container{
-        padding:25px;
-    }
-
-    .form-container input,
-    .form-container textarea{
-        font-size:15px;
-    }
-
-    .login-btn{
-        width:100%;
-    }
-
-}
-
-/* ===========================
-   HP KECIL
-=========================== */
-
-@media(max-width:480px){
-
-    .hero-content h1{
-        font-size:32px;
-        line-height:45px;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .music-btn{
-        width:50px;
-        height:50px;
-        font-size:20px;
     }
 
 }

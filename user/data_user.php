@@ -185,8 +185,9 @@ include '../koneksi.php';
     <div class="container">
         <h1>Data User</h1>
 
-        <a href="data_user.php" class="btn">+👤+ Tambah User</a>
+        <a href="create_user.php" class="btn">+👤+ Tambah User</a>
         <a href="../tamu/data_tamu.php" class="btn">📝Data Tamu</a>
+        <a href="../index.php" class="btn">💍halaman undangan</a>
 
 
         <table>

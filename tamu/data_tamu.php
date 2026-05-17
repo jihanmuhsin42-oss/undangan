@@ -23,14 +23,16 @@ include '../koneksi.php';
             min-height:100vh;
             display:flex;
             justify-content:center;
-            align-items:center;
+            align-items:flex-start;
             background:linear-gradient(135deg, #1d2671, #c33764);
-            overflow:hidden;
+            overflow-y:auto;
+            overflow-x:hidden;
             position:relative;
             padding:20px;
         }
 
-        /* Background animasi */
+        /* BACKGROUND ANIMASI */
+
         body::before{
             content:'';
             position:absolute;
@@ -56,22 +58,30 @@ include '../koneksi.php';
         }
 
         @keyframes gerak{
+
             0%{
                 transform:translateY(0);
             }
+
             100%{
                 transform:translateY(40px);
             }
+
         }
 
         @keyframes gerak2{
+
             0%{
                 transform:translateX(0);
             }
+
             100%{
                 transform:translateX(-40px);
             }
+
         }
+
+        /* CONTAINER */
 
         .container{
             width:100%;
@@ -83,6 +93,7 @@ include '../koneksi.php';
             box-shadow:0 8px 32px rgba(0,0,0,0.3);
             position:relative;
             z-index:1;
+            margin:40px 0;
         }
 
         h1{
@@ -91,6 +102,8 @@ include '../koneksi.php';
             margin-bottom:25px;
             font-size:35px;
         }
+
+        /* BUTTON */
 
         .btn-tambah{
             display:inline-block;
@@ -109,11 +122,18 @@ include '../koneksi.php';
             transform:scale(1.05);
         }
 
+        /* TABLE */
+
+        .table-responsive{
+            overflow-x:auto;
+        }
+
         table{
             width:100%;
             border-collapse:collapse;
             overflow:hidden;
             border-radius:15px;
+            min-width:800px;
         }
 
         table th{
@@ -135,6 +155,8 @@ include '../koneksi.php';
             transition:0.3s;
         }
 
+        /* BUTTON AKSI */
+
         .edit{
             text-decoration:none;
             background:#28a745;
@@ -143,6 +165,7 @@ include '../koneksi.php';
             border-radius:8px;
             margin-right:5px;
             transition:0.3s;
+            display:inline-block;
         }
 
         .edit:hover{
@@ -156,20 +179,19 @@ include '../koneksi.php';
             padding:8px 12px;
             border-radius:8px;
             transition:0.3s;
+            display:inline-block;
         }
 
         .delete:hover{
             background:#b02a37;
         }
 
+        /* RESPONSIVE */
+
         @media(max-width:768px){
 
             .container{
                 padding:15px;
-            }
-
-            table{
-                font-size:12px;
             }
 
             h1{
@@ -178,6 +200,18 @@ include '../koneksi.php';
 
             .btn-tambah{
                 padding:10px 15px;
+                font-size:14px;
+            }
+
+            table{
+                font-size:12px;
+            }
+
+            .edit,
+            .delete{
+                padding:6px 10px;
+                font-size:12px;
+                margin-bottom:5px;
             }
 
         }
@@ -194,56 +228,78 @@ include '../koneksi.php';
             + Tambah Tamu
         </a>
 
-        <table>
+        <div class="table-responsive">
 
-            <tr>
-                <th>ID</th>
-                <th>Nama Tamu</th>
-                <th>Jumlah Tamu</th>
-                <th>Kehadiran</th>
-                <th>Pesan</th>
-                <th>Aksi</th>
-            </tr>
+            <table>
 
-            <?php
-            $data = mysqli_query($conn, "SELECT * FROM table_tamu");
+                <tr>
 
-            while($item = mysqli_fetch_array($data)){
-            ?>
+                    <th>ID</th>
+                    <th>Nama Tamu</th>
+                    <th>Jumlah Tamu</th>
+                    <th>Kehadiran</th>
+                    <th>Pesan</th>
+                    <th>Aksi</th>
 
-            <tr>
+                </tr>
 
-                <td><?= $item['id']; ?></td>
+                <?php
+                $data = mysqli_query($conn, "SELECT * FROM table_tamu");
 
-                <td><?= $item['nama_tamu']; ?></td>
+                while($item = mysqli_fetch_array($data)){
+                ?>
 
-                <td><?= $item['jumblah_tamu']; ?></td>
+                <tr>
 
-                <td><?= $item['kehadiran']; ?></td>
+                    <td>
+                        <?= $item['id']; ?>
+                    </td>
 
-                <td><?= $item['pesan']; ?></td>
+                    <td>
+                        <?= $item['nama_tamu']; ?>
+                    </td>
 
-                <td>
+                    <td>
+                        <?= $item['jumblah_tamu']; ?>
+                    </td>
 
-                    <a class="edit" href="edit_tamu.php?id=<?= $item['id']; ?>">
-                        ✏️Edit
-                    </a>
+                    <td>
+                        <?= $item['kehadiran']; ?>
+                    </td>
 
-                    <a class="delete"
-                    href="delete_tamu.php?id=<?= $item['id']; ?>"
-                    onclick="return confirm('Yakin ingin menghapus data ini?')">
+                    <td>
+                        <?= $item['pesan']; ?>
+                    </td>
 
-                        🗑️Delete
+                    <td>
 
-                    </a>
+                        <a class="edit"
+                        href="edit_tamu.php?id=<?= $item['id']; ?>">
 
-                </td>
+                            ✏️ Edit
 
-            </tr>
+                        </a>
 
-            <?php } ?>
+                        <a class="delete"
+                        href="delete_tamu.php?id=<?= $item['id']; ?>"
+                        onclick="return confirm('Yakin ingin menghapus data ini?')">
 
-        </table>
+                            🗑️ Delete
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                <?php
+                }
+                ?>
+
+            </table>
+
+        </div>
+        <a href="../user/data_user.php" class="btn-tambah">kembali</a>
 
     </div>
 
