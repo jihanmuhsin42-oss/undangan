@@ -37,7 +37,7 @@ if(isset($_POST['simpan'])){
 
 <!-- AUDIO -->
 <audio id="musik" loop>
-    <source src="DJ TIKTOK TERBARU 2024🎵DJ DOLA DOLA SALAH DOLA🎵DJ CIS CIS FAJA SEKALI🎵REMIX FULL BASS.mp3" type="audio/mpeg">
+    <source src="Nadhif Basalamah - kota ini tak sama tanpamu (Official Lyric Video).mp4" type="audio/mpeg">
 </audio>
 
 <!-- MUSIC BUTTON -->
@@ -118,22 +118,62 @@ if(isset($_POST['simpan'])){
 
         <div class="story-image">
 
-            <img src="foto/cowok.png" alt="foto">
+            <img src="foto/cowok1.png" alt="foto">
 
         </div>
 
         <div class="story-image">
 
-            <img src="foto/cewek.png" alt="foto">
+            <img src="foto/cewek1.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah1.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah2.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah3.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah4.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah5.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah6.png" alt="foto">
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="foto/nikah7.png" alt="foto">
 
         </div>
 
         <div class="story-text">
 
-            Kami dipertemukan di Jogja dalam sebuah
-            forum sederhana. Dari pertemuan itu kami
-            saling mengenal, memahami, dan akhirnya
-            memutuskan untuk menikah.
+            Dipertemukan oleh waktu, didekatkan oleh rasa, dan dipersatukan dalam doa. 
+            Kini kami siap memulai perjalanan baru sebagai pasangan suami istri.
 
         </div>
 
@@ -158,12 +198,16 @@ if(isset($_POST['simpan'])){
 
             <p>
 
-                Koko - Ayah <br><br>
-                Salidah - Ibu <br><br>
-                Fafa - Kakek <br><br>
-                Yuyu - Adik <br><br>
-                Yaku - Abang
-
+                1.  H. Darwis, S. Sos MM/ Hj. Rasidah, S. Sos <br><br>
+                2.  H. Ahmad muzni/ Hj. Siti Rohana (Alm) <br><br>
+                3.  Azanata Darussalam, S. STP/ Riska Anggraeni Purnomo, S.PWK <br><br>
+                4.  Mujahidin, SH/Sri Hani (Sari) <br><br>
+                5.  Abdul Manan/Ernawati, S.Pd <br><br>
+                5.  Ratna Faulita / M. Noor (Alm) <br><br>
+                7.  M. Yusran/Latifah <br><br>
+                8.  Rajaetpan Noor Riswandi / Nurhayati <br><br>
+                9.  Bahriah/Praja Nugroho, SH <br><br>
+                10. Edy Sulaiman / Surihani <br><br>
             </p>
 
         </div>
@@ -176,12 +220,14 @@ if(isset($_POST['simpan'])){
 
             <p>
 
-                Popo - Ayah <br><br>
-                Pipi - Ibu <br><br>
-                Pupu - Kakek <br><br>
-                Pypy - Adik <br><br>
-                Plpl - Abang
-
+                1. Tukimun dan Mila (Alm) <br><br>
+                2. Tumirah dan Misri <br><br>
+                3. Tukinem dan Agus Yudiharno <br><br>
+                4. Tukiman dan Sunaristiyani <br><br>
+                5. Novi Tri Yuliani dan Awang Idwan Ahmadi <br><br>
+                6. Oktavian Prayoga Putra dan Ade Zunian Palupi <br><br>
+                7. Heri Iswanto, S.Ag <br><br>
+                8. Ali Mashuri dan Siti Fatimah <br><br>
             </p>
 
         </div>
